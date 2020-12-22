@@ -27,7 +27,7 @@ Let's get the website up the running on your local machine.
 * Install [Node.js](http://nodejs.org)
 
 ### 1. Fork repo
-Fork this repo to your GitHub account
+Fork this repo to your GitHub account  
 ![](https://i.ibb.co/rZSBzQ7/Capture.png)
 
 ### 2. Clone repo
