@@ -1,0 +1,11 @@
+@import '../partials/typography';
+@import '../partials/colors';
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --drop-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  --border-radius: 0.5rem;
+}

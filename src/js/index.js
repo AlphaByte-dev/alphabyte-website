@@ -1,0 +1,1 @@
+const alpha = 'byte';

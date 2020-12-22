@@ -1,0 +1,6 @@
+@import 'partials/utils';
+
+h1 {
+  color: var(--color-primary);
+  @include flex-center;
+}
