@@ -1,3 +1,4 @@
+@import './normalize';
 @import '../partials/typography';
 @import '../partials/colors';
 
@@ -9,3 +10,11 @@
   --drop-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
   --border-radius: 0.5rem;
 }
+
+a, a:hover, a:active, a:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+
+@import './nav';
+@import './footer';

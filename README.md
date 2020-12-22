@@ -15,9 +15,9 @@ Official website of AlphaByte, Amity University Mumbai.
 
 <a id="tech-stack"></a>
 ## ⚙️ Tech Stack
-* [Gulp](http://gulpjs.com) is a task runner to automate the development workflow.
-* [Sass](https://sass-lang.com/) is a CSS preprocessor that gives CSS many superpowers.
 * HTML, CSS, JavaScript
+* [Gulp](http://gulpjs.com) - a task runner to automate the development workflow.
+* [Sass](https://sass-lang.com/) - a CSS preprocessor that gives CSS many superpowers.
 
 <a id="environment-setup"></a>
 ## 🔨 Environment Setup
@@ -57,6 +57,9 @@ A browser window will automatically open up with a live-reloading preview of the
 * `dist/` folder contains generated build files which are to be deployed.
 * `src/pages/` folder contains html files corresponding to the pages available on the website.
 * `src/sections/` folder contains reusable html files that can be included inside pages. (nav, footer, etc.)
+* `src/css/all/` folder contains css files that are included in every html page on the website.
+* `src/js/all/` folder contains javascript files that are included in every html page on the website.
+* `src/images/` folder contains all images on the website.
 * `gulpfile.js` is the [Gulp](http://gulpjs.com) config file, in-charge of launching dev server, bulding project, minifying JS and CSS, compressing images, etc.
 * `babel.config.json` is the [Babel](http://babeljs.com) config file. Babel allows us to use the latest JavaScript features that might not currently be supported in all browsers.
 

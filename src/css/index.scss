@@ -1,6 +1,129 @@
 @import 'partials/utils';
 
-h1 {
+#header {
+  position: relative;
+  height: 520px;
+  // background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo {
+  width: 220px;
+  margin-bottom: 60px;
+}
+
+.header__title1 {
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin: 0;
+  text-align: center;
+}
+
+.header__title2 {
+  font-weight: 600;
   color: var(--color-primary);
-  @include flex-center;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.shape1 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100px 90px 270px;
+  border-color: transparent transparent #c4c4c4 transparent;
+}
+
+.shape2 {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 47.5px);
+  transform: translatex(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 90px 270px;
+  border-color: transparent transparent #bbbbbb transparent;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.container__inner {
+  position: relative;
+  max-width: 900px;
+  height: 100%;
+  // background-color: aqua;
+  margin: 0 auto;
+  padding: 50px 20px 50px 20px;
+}
+
+.container__title {
+  position: absolute;
+  top: -35px;
+  left: 20px;
+  margin: 0;
+  font-size: 6rem;
+  opacity: 0.2;
+}
+
+#about-us {
+  color: white;
+  height: auto;
+  border-top: 5px solid var(--color-secondary);
+  border-bottom: 5px solid var(--color-secondary);
+  background-color: var(--color-primary);
+
+  .container__inner {
+    padding: 110px 20px 50px 20px;
+  }
+
+  .container__title {
+    color: white;
+  }
+}
+
+@media (max-width: 1250px) {
+  .container__title {
+    font-size: 5rem;
+    top: -30px;
+  }
+  #about-us {
+    .container__inner {
+      padding: 90px 20px 50px 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container__title {
+    font-size: 4rem;
+    top: 25px;
+  }
+  #about-us {
+    .container__inner {
+      padding: 120px 20px 50px 20px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .container__title {
+    font-size: 3rem;
+    top: 25px;
+  }
+  #about-us {
+    .container__inner {
+      padding: 100px 20px 50px 20px;
+    }
+  }
 }

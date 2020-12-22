@@ -1,0 +1,7 @@
+@import '../partials/utils';
+
+.footer {
+  @include flex-center;
+  padding: 20px;
+  color: var(--color-primary);
+}
