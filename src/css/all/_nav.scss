@@ -3,6 +3,7 @@
 .nav-main {
   margin-top: 20px;
   @include flex-center;
+  flex-wrap: wrap;
 }
 
 .nav-main__link {
