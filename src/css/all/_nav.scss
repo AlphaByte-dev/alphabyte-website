@@ -3,7 +3,6 @@
 .nav-main {
   margin-top: 20px;
   @include flex-center;
-  flex-wrap: wrap;
 }
 
 .nav-main__link {
@@ -36,5 +35,14 @@
   &:hover::before {
     height: 40px;
     opacity: 0.15;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-main {
+    align-items: unset;
+    justify-content: unset;
+    overflow: auto;
+    padding: 0 20px;
   }
 }
