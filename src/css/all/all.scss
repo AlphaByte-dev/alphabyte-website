@@ -16,5 +16,9 @@ a, a:hover, a:active, a:focus {
   outline: 0;
 }
 
+canvas {
+  display: block;
+}
+
 @import './nav';
 @import './footer';

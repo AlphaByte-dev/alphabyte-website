@@ -3,6 +3,11 @@
 .nav-main {
   margin-top: 20px;
   @include flex-center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 .nav-main__link {
