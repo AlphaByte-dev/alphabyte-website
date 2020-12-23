@@ -20,5 +20,18 @@ canvas {
   display: block;
 }
 
+#page-header {
+  margin-top: 100px;
+  background-color: var(--color-primary);
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#page-title {
+  margin: 0;
+}
+
 @import './nav';
 @import './footer';
