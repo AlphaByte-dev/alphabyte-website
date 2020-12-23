@@ -20,7 +20,9 @@ canvas {
   display: block;
 }
 
+/* Page header */
 #page-header {
+  position: relative;
   margin-top: 100px;
   background-color: var(--color-primary);
   color: white;
@@ -28,9 +30,43 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: center;
+  // border-top: 5px solid var(--color-secondary);
+  border-bottom: 5px solid var(--color-secondary);
 }
 #page-title {
   margin: 0;
+}
+.triangle-top-left {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  border-style: solid;
+  border-width: 40px 0 0 200px;
+  border-color: transparent transparent transparent var(--color-primary);
+}
+.triangle-top-right {
+  position: absolute;
+  top: -35px;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 40px 200px;
+  border-color: transparent transparent var(--color-primary) transparent;
+}
+.triangle-bottom-left {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  border-style: solid;
+  border-width: 40px 0 0 200px;
+  border-color: transparent transparent transparent white;
+}
+.triangle-bottom-right {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 40px 200px;
+  border-color: transparent transparent white transparent;
 }
 
 @import './nav';
