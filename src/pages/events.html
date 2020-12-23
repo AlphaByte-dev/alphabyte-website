@@ -14,6 +14,28 @@
 
   @@include('../sections/page-header.html', {'title': 'Events'})
 
+  <main id="members-section" class="container">
+    <div class="container__inner">
+
+      <div id="upcoming-events-subsection">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div id="upcoming-events" class="events">
+          <!-- data loads here -->
+        </div>
+      </div>
+
+      <hr class="section-divider-hr">
+
+      <div id="past-events-subsection">
+        <h2 class="section-title">Past Events</h2>
+        <div id="past-events" class="events">
+          <!-- data loads here -->
+        </div>
+      </div>
+
+    </div>
+  </main>
+
   @@include('../sections/footer.html')
   <!-- JS -->
   <script src="./assets/js/about.js"></script>
