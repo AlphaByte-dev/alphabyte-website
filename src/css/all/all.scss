@@ -37,14 +37,14 @@ canvas {
 #page-header {
   position: relative;
   margin-top: 100px;
-  background-color: var(--color-primary);
-  color: white;
   height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   // border-top: 5px solid var(--color-secondary);
   border-bottom: 5px solid var(--color-secondary);
+  color: white;
+  background-color: var(--color-primary);
 }
 #page-title {
   margin: 0;
@@ -83,6 +83,9 @@ canvas {
   border-color: transparent transparent white transparent;
 }
 @media (max-width: 1024px) {
+  .container__inner {
+    padding: 40px 20px 40px 20px;
+  }
   .triangle-top-left {
     top: -25px;
     border-width: 30px 0 0 100px;
@@ -101,6 +104,15 @@ canvas {
   }
 }
 @media (max-width: 745px) {
+  #page-header {
+    background: repeating-linear-gradient(
+      -55deg,
+      var(--color-primary),
+      var(--color-primary) 10px,
+      rgba(var(--color-primary-rgb), 0.98) 10px,
+      rgba(var(--color-primary-rgb), 0.98) 20px
+    );
+  }
   .triangle-top-left {
     display: none;
   }
