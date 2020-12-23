@@ -1,0 +1,119 @@
+.members-title {
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-family: var(--font-secondary);
+}
+.members {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 100px 4.5rem;
+  margin-top: 80px;
+}
+
+.member {
+  --member-animation: all 0.35s ease-in-out;
+  max-width: 300px;
+  width: 100%;
+  font-family: var(--font-primary);
+  padding: 20px 55px 20px 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 10px 10px 0px 0px rgba(var(--color-primary-rgb), 0.1),
+    20px 16px 50px -20px rgba(var(--color-primary-rgb), 1);
+  position: relative;
+  transition: var(--member-animation);
+
+  .member-social a:hover {
+    background-color: rgba(var(--color-primary-rgb), 0.66),
+  }
+
+  &:hover .member-social a {
+    transition: var(--member-animation);
+  }
+
+  &:hover .member__info .member__fullname {
+    color: var(--color-primary);
+  }
+}
+
+.member-image {
+  height: 80px;
+  overflow: visible;
+  background-position: center;
+  position: relative;
+
+  img {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    position: absolute;
+    top: -70px;
+    left: -30px;
+    box-shadow: 6px 6px 10px -10px rgb(183, 183, 183);
+    transition: var(--member-animation);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 6px 6px 15px -10px rgb(183, 183, 183);
+    }
+  }
+}
+
+.member__info {
+  font-family: var(--font-primary);
+}
+
+.member__fullname {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+  transition: var(--member-animation);
+  font-weight: 500;
+}
+
+.member__role {
+  font-family: monospace, sans-serif;
+  font-size: 1rem;
+}
+
+.member-social {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-image-width: 0;
+    background-color: rgba(var(--color-primary-rgb), 0.85);
+    color: white;
+    transition: var(--member-animation);
+
+    &:first-child {
+      border-top-right-radius: 10px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .members-title {
+    text-align: center;
+  }
+  .member-image img {
+    width: 130px;
+    height: 130px;
+    top: -70px;
+    left: 0px;
+  }
+}

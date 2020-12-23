@@ -20,6 +20,19 @@ canvas {
   display: block;
 }
 
+/* Section container */
+.container {
+  overflow: hidden;
+}
+
+.container__inner {
+  position: relative;
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px 20px 50px 20px;
+}
+
 /* Page header */
 #page-header {
   position: relative;
@@ -35,6 +48,7 @@ canvas {
 }
 #page-title {
   margin: 0;
+  text-transform: uppercase;
 }
 .triangle-top-left {
   position: absolute;
@@ -54,7 +68,7 @@ canvas {
 }
 .triangle-bottom-left {
   position: absolute;
-  bottom: -5px;
+  bottom: -7.5px;
   left: 0;
   border-style: solid;
   border-width: 40px 0 0 200px;
@@ -62,11 +76,43 @@ canvas {
 }
 .triangle-bottom-right {
   position: absolute;
-  bottom: -5px;
+  bottom: -7.5px;
   right: 0;
   border-style: solid;
   border-width: 0 0 40px 200px;
   border-color: transparent transparent white transparent;
+}
+@media (max-width: 1024px) {
+  .triangle-top-left {
+    top: -25px;
+    border-width: 30px 0 0 100px;
+  }
+  .triangle-top-right {
+    top: -25px;
+    border-width: 0 0 30px 100px;
+  }
+  .triangle-bottom-left {
+    bottom: -7.5px;
+    border-width: 30px 0 0 100px;
+  }
+  .triangle-bottom-right {
+    bottom: -7.5px;
+    border-width: 0 0 30px 100px;
+  }
+}
+@media (max-width: 745px) {
+  .triangle-top-left {
+    display: none;
+  }
+  .triangle-top-right {
+    display: none;
+  }
+  .triangle-bottom-left {
+    display: none;
+  }
+  .triangle-bottom-right {
+    display: none;
+  }
 }
 
 @import './nav';

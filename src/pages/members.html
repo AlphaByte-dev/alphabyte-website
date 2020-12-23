@@ -12,10 +12,22 @@
 <body>
   @@include('../sections/nav.html')
 
-  @@include('../sections/page-header.html', {'title': 'Member'})
+  @@include('../sections/page-header.html', {'title': 'Members'})
+
+  <main id="members-section" class="container">
+    <div class="container__inner">
+      <div id="core-committee">
+        <h2 class="members-title">Core Committee</h2>
+        <div id="core-committee-members" class="members">
+          <!-- data loads here -->
+        </div>
+      </div>
+    </div>
+  </main>
 
   @@include('../sections/footer.html')
   <!-- JS -->
+  <script src="./assets/data/data_members.js"></script>
   <script src="./assets/js/members.js"></script>
 </body>
 </html>

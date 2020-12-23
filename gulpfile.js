@@ -29,6 +29,7 @@ gulp.task('serve', function() {
   gulp.watch('src/css/**/*', { ignoreInitial: false }, gulp.series(['sass']));
   gulp.watch('src/js/**/*', { ignoreInitial: false }, gulp.series(['js']));
   gulp.watch('src/images/**/*', { ignoreInitial: false }, gulp.series(['images']));
+  gulp.watch('src/data/**/*', { ignoreInitial: false }, gulp.series(['data']));
   gulp.watch(['src/**/*.html'], { ignoreInitial: false }, gulp.series(['html', 'inject']));
   gulp.watch('dist/*').on('change', browserSync.reload);
 });
@@ -89,6 +90,13 @@ gulp.task('images', function () {
     .pipe(browserSync.reload({stream: true}));
 });
 
+/* IMAGES */
+gulp.task('data', function () {
+  return gulp.src('src/data/**/*')
+    .pipe(gulp.dest('dist/assets/data/'))
+    .pipe(browserSync.reload({stream: true}));
+});
+
 /* INJECT CSS AND JS INTO HTML */
 gulp.task('inject', function () {
   const sources = gulp.src(['dist/assets/js/all/*.js', 'dist/assets/css/all/*.css'], { read: false });
@@ -98,6 +106,6 @@ gulp.task('inject', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', gulp.series(['clean', 'sass', 'js', 'images', 'html', 'inject']));
+gulp.task('build', gulp.series(['clean', 'sass', 'js', 'images', 'data', 'html', 'inject']));
 
 gulp.task('default', gulp.series(['serve']));
