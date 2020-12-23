@@ -11,9 +11,14 @@
   --border-radius: 0.5rem;
 }
 
+body {
+  color: var(--color-black);
+}
+
 a, a:hover, a:active, a:focus {
   -webkit-tap-highlight-color: transparent;
   outline: 0;
+  text-decoration: none;
 }
 
 canvas {
@@ -31,6 +36,29 @@ canvas {
   height: 100%;
   margin: 0 auto;
   padding: 50px 20px 50px 20px;
+}
+
+.section-title {
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: var(--font-secondary);
+}
+
+.section-subtitle {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: var(--font-secondary);
+  margin-bottom: 15px;
+}
+
+.section-divider-hr {
+  height: 5px;
+  border: none;
+  background-color: var(--color-secondary);
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 /* Page header */

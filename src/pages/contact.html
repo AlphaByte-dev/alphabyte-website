@@ -12,7 +12,69 @@
 <body>
   @@include('../sections/nav.html')
 
-  @@include('../sections/page-header.html', {'title': 'Contact'})
+  @@include('../sections/page-header.html', {'title': 'Contact Us'})
+
+  <main id="contact-section" class="container">
+    <div class="container__inner">
+
+      <div id="contact-details-subsection">
+        <h2 class="section-title">Details</h2>
+        <div  class="subsection">
+          <h3 class="section-subtitle">Address</h3>
+          <a class="link" href="https://www.google.com/maps/place/Amity+University+Mumbai,+Amity+University+Mumbai,+Mumbai+-+Pune+Expressway,+Bhatan+Post+-+Somathne,+Panvel,+Mumbai,+Maharashtra+410206/@18.9316028,73.1623843,15z/data=!4m2!3m1!1s0x3be7e66113dcb9a9:0xb452693a3695fd75" target="_blank">Amity University Mumbai</a>
+          <div class="description">Amity University Mumbai, Mumbai - Pune Expressway, Bhatan Post - Somathne, Panvel, Mumbai, Maharashtra 410206</div>
+        </div>
+        <div  class="subsection">
+          <h3 class="section-subtitle">Email</h3>
+          <a class="link" href="mailto:contact.alphabyte@gmail.com" target="_blank">contact.alphabyte@gmail.com</a>
+          <div class="description">Send us your query anytime!</div>
+        </div>
+      </div>
+
+      <hr class="section-divider-hr">
+
+      <div id="contact-form-subsection">
+        <h2 class="section-title">Form</h2>
+        <form id="contact-form" action="https://formspree.io/f/mdoppgdj" method="POST">
+          <div class="contact-form__part contact-form__left">
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" placeholder="Enter your name" id="name">
+            </div>
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="email" name="_replyto" placeholder="Enter your email" id="email" required>
+            </div>
+            <div class="input-group">
+              <label for="subject">Subject</label>
+              <input type="text" name="subject" placeholder="Enter subject" id="subject">
+            </div>
+          </div>
+          <div class="contact-form__part contact-form__right">
+            <div class="input-group">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="Enter your message" rows="6" required></textarea>
+            </div>
+            <div class="input-group">
+              <button class="form-button" type="submit">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <hr class="section-divider-hr">
+
+      <div id="contact-map">
+        <h2 class="section-title">Map</h2>
+        <div id="google-map">
+          <div style="width: 100%">
+            <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Amity%20University%20Mumbai+(Amity%20University%20Mumbai)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
 
   @@include('../sections/footer.html')
   <!-- JS -->

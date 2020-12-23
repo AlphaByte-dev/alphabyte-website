@@ -71,7 +71,9 @@ const members_data = [
     fullname: "Srihari Narayan",
     role: "Marketing Head",
     image: "./assets/images/members/Srihari.jpg",
-    social_links: {}
+    social_links: {
+      instagram: "https://www.instagram.com/_alien.in.disguise_/",
+    }
   },
   {
     fullname: "Ritvik Sharma",
