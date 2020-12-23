@@ -31,6 +31,10 @@
           `<a href="${member.social_links.twitter}" target="_blank">
             <i class="fab fa-twitter"></i>
           </a>`:""}
+        ${member.social_links.instagram ? 
+          `<a href="${member.social_links.instagram}" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>`:""}
         ${member.social_links.facebook ? 
         `<a href="${member.social_links.facebook}" target="_blank">
           <i class="fab fa-facebook"></i>
