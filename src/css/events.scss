@@ -1,3 +1,7 @@
+#events-section {
+  margin-bottom: 30px;
+}
+
 .event {
   --event-animation: all 0.35s ease-in-out;
   position: relative;
@@ -6,7 +10,7 @@
   display: flex;
   flex-direction: row;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgba(var(--color-primary-rgb), 0.02);
   box-shadow: 2px 2px 12px rgba(var(--color-primary-rgb), 0.10);
   border: 1px solid rgba(var(--color-primary-rgb), 0.3);
   margin-bottom: 50px;
@@ -30,6 +34,10 @@
   // border: 1px solid rgba(var(--color-primary-rgb), 0.3);
   box-shadow: 7px 7px 0 0 rgba(var(--color-primary-rgb),.1),20px 16px 50px -20px rgba(var(--color-primary-rgb),1);
 
+  &:hover {
+    opacity: 0.9;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -38,10 +46,34 @@
   }
 }
 
+.event__location {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 8px;
+  font-family: var(--font-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.5);
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  // margin: 6px;
+  // border-radius: 6px;
+}
+
 .event__info {
   width: 100%;
   padding: 20px;
   margin-left: 40%;
+}
+
+.event__date {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .event__name {
@@ -51,8 +83,54 @@
   margin-bottom: 15px;
 }
 
+.event__description {
+  color: var(--color-black-light);
+  margin-bottom: 15px;
+}
+
+.event__button {
+  padding: 8px 12px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.event__button-disabled {
+  pointer-events: none;
+  user-select: none;
+
+  button {
+    background-color: rgba(var(--color-primary-rgb), 0.25);
+    color: white;
+  }
+}
+
+#past-events .register-button {
+  display: none;
+}
+
+.event__info__child:last-child {
+  margin-bottom: 0;
+}
+
+.no-events {
+  font-family: var(--font-primary);
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: rgba(var(--color-black-light-rgb), 0.2);
+}
+
 #upcoming-events, #past-events {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .sl-close {
