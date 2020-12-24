@@ -6,7 +6,10 @@
         <div class="event__location">${event.location}</div>
       </a>
       <div class="event__info">
-        <div class="event__info__child event__date">${event.date.toDateString()}</div>
+        <div class="event__info__child event__datetime">
+          <span class="event__date">${event.date.toDateString()}</span>•<!--
+          --><span class="event__time">${event.date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+        </div>
         <div class="event__info__child event__name">${event.name}</div>
         <div class="event__info__child event__description">${event.description.length > 113 ? event.description.substring(0, 110) + '...' : event.description}</div>
         <a class="event__info__child event__button-container ${event.register_link ? '' : 'event__button-disabled'}" href="${event.register_link}" target="_blank">

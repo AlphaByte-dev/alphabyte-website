@@ -69,11 +69,18 @@
   margin-left: 40%;
 }
 
-.event__date {
+.event__datetime {
   font-size: 1.5rem;
   color: var(--color-secondary);
   font-weight: 600;
   margin-bottom: 5px;
+}
+.event__date {
+  margin-right: 7px;
+}
+.event__time {
+  font-weight: 400;
+  margin-left: 7px;
 }
 
 .event__name {

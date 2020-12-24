@@ -1,7 +1,7 @@
 const events_data = [
   {
     name: "Hacktoberfest - Open Source, Git & GitHub",
-    description: "Get started with Open Source and make your very first contribution in Hacktoberfest. We will cover the basic of Git and how to use GitHub to your advantage.",
+    description: "Get started with Open Source and make your very first contribution in Hacktoberfest.",
     image: "./assets/images/events/Hacktoberfest2020.png",
     location: "Online",
     date: "2020-10-17T11:00:00+0530",
