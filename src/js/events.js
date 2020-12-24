@@ -42,7 +42,7 @@
   const upcomingEventsHTMLElement = document.querySelector('#upcoming-events');
 
   if(upcoming_events_data.length > 0) {
-    upcoming_events_data.sort((a, b) => (a.date < b.date) ? -1 : (a.date > b.date) ? 1 : 0);
+    upcoming_events_data.sort((a, b) => (a.date > b.date) ? -1 : (a.date < b.date) ? 1 : 0);
     
     const upcomingEventsFragment = document.createDocumentFragment();
     upcoming_events_data.forEach(event => {
@@ -61,7 +61,7 @@
   const pastEventsHTMLElement = document.querySelector('#past-events');
 
   if(past_events_data.length > 0) {
-    past_events_data.sort((a, b) => (a.date < b.date) ? -1 : (a.date > b.date) ? 1 : 0);
+    past_events_data.sort((a, b) => (a.date > b.date) ? -1 : (a.date < b.date) ? 1 : 0);
     
     const pastEventsFragment = document.createDocumentFragment();
     past_events_data.forEach(event => {
