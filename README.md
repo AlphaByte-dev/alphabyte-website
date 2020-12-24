@@ -6,12 +6,20 @@ Official website of AlphaByte, Amity University Mumbai.
 
 ### Table of Contents
 
+‒ [Hosting](#hosting)  
 ‒ [Tech Stack](#tech-stack)  
-‒ [Environment Setup](#environment-setup)  
-‒ [How It Works](#how-it-works)  
+‒ [Dev Environment Setup](#environment-setup)  
+‒ [Project Structure](#project-structure)  
+‒ [Edit Data](#edit-data)  
 ‒ [Contributing](#contributing)  
 ‒ [Discord](#discord)  
 ‒ [License](#license)  
+
+<a id="hosting"></a>
+## 🚀 Hosting
+Project is currently hosted on [Netlify](https://www.netlify.com/).
+
+**Live URL:** https://alphabyte-aum.netlify.app/
 
 <a id="tech-stack"></a>
 ## ⚙️ Tech Stack
@@ -20,7 +28,7 @@ Official website of AlphaByte, Amity University Mumbai.
 * [Sass](https://sass-lang.com/) - a CSS preprocessor that gives CSS many superpowers.
 
 <a id="environment-setup"></a>
-## 🔨 Environment Setup
+## 🔨 Dev Environment Setup
 Let's get the website up the running on your local machine.
 
 ### 0. Prerequisites
@@ -51,17 +59,27 @@ npm run start
 ```
 A browser window will automatically open up with a live-reloading preview of the code.
 
-<a id="how-it-works"></a>
-## 🚀 How It Works
+<a id="project-structure"></a>
+## 🗃 Project Structure
 * `src/` folder contains all the source files.
 * `dist/` folder contains generated build files which are to be deployed.
 * `src/pages/` folder contains html files corresponding to the pages available on the website.
 * `src/sections/` folder contains reusable html files that can be included inside pages. (nav, footer, etc.)
+* `src/css/` folder contains page specific css files
 * `src/css/all/` folder contains css files that are included in every html page on the website.
+* `src/js/` folder contains page specific javascript files
 * `src/js/all/` folder contains javascript files that are included in every html page on the website.
 * `src/images/` folder contains all images on the website.
+* `src/data/` folder contains data files for events and members.
+* `src/copy/` folder contains files to be directly copied to root of website (dist/). Contains favicons.
 * `gulpfile.js` is the [Gulp](http://gulpjs.com) config file, in-charge of launching dev server, bulding project, minifying JS and CSS, compressing images, etc.
 * `babel.config.json` is the [Babel](http://babeljs.com) config file. Babel allows us to use the latest JavaScript features that might not currently be supported in all browsers.
+
+<a id="edit-data"></a>
+## 💾 Edit Data
+All changing data is saved in separate javascript files as an object so that its easy to modify.
+* **Events data**: Modify `src/data/data_events.js` file
+* **Members data**: Modify `src/data/data_members.js` file
 
 <a id="contributing"></a>
 ## 💻 Contributing
