@@ -7,7 +7,8 @@
       </a>
       <div class="event__info">
         <div class="event__info__child event__datetime">
-          <span class="event__date">${event.date.toDateString()}</span>•<!--
+          <span class="event__date">${event.date.toDateString()}</span><!--
+          --><span class="event__datetime-separator">•</span><!--
           --><span class="event__time">${event.date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
         </div>
         <div class="event__info__child event__name">${event.name}</div>
