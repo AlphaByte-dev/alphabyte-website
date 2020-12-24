@@ -30,6 +30,7 @@ gulp.task('serve', function() {
   gulp.watch('src/js/**/*', { ignoreInitial: false }, gulp.series(['js']));
   gulp.watch('src/images/**/*', { ignoreInitial: false }, gulp.series(['images']));
   gulp.watch('src/data/**/*', { ignoreInitial: false }, gulp.series(['data']));
+  gulp.watch('src/copy/**/*', { ignoreInitial: false }, gulp.series(['copy']));
   gulp.watch(['src/**/*.html'], { ignoreInitial: false }, gulp.series(['html', 'inject']));
   gulp.watch('dist/*').on('change', browserSync.reload);
 });
@@ -97,6 +98,13 @@ gulp.task('data', function () {
     .pipe(browserSync.reload({stream: true}));
 });
 
+/* COPY files in copy folder to root of dist */
+gulp.task('copy', function () {
+  return gulp.src('src/copy/**/*')
+    .pipe(gulp.dest('dist/'))
+    .pipe(browserSync.reload({stream: true}));
+});
+
 /* INJECT CSS AND JS INTO HTML */
 gulp.task('inject', function () {
   const sources = gulp.src(['dist/assets/js/all/*.js', 'dist/assets/css/all/*.css'], { read: false });
@@ -106,6 +114,6 @@ gulp.task('inject', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', gulp.series(['clean', 'sass', 'js', 'images', 'data', 'html', 'inject']));
+gulp.task('build', gulp.series(['clean', 'sass', 'js', 'images', 'copy', 'data', 'html', 'inject']));
 
 gulp.task('default', gulp.series(['serve']));
