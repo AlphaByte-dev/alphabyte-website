@@ -75,9 +75,9 @@
 #about-us {
   color: white;
   height: auto;
-  border-top: 5px solid var(--color-secondary);
-  border-bottom: 5px solid var(--color-secondary);
   background-color: var(--color-primary);
+  border-top: 5px solid var(--color-secondary);
+  // border-bottom: 5px solid var(--color-secondary);
 
   .container__inner {
     padding: 50px 20px 50px 20px;

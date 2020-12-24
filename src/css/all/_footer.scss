@@ -4,4 +4,88 @@
   @include flex-center;
   padding: 20px;
   color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.social-section .container__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.social-button {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  margin: 10px;
+  border-radius: 10px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.linkedin {
+    background-color: #0A66C2;
+  }
+
+  &.instagram {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 20%,#dc2743 40%,#cc2366 60%,#bc1888 80%, #893CC1 100%);
+  }
+
+  &.twitter {
+    background: #1C9CEA;
+  }
+
+  &.discord {
+    background: #7289DA;
+  }
+}
+
+.rainbow-hr  { 
+  outline: none;
+  border: none;
+  height: 5px;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 200% 100%;
+  opacity: 0.5;
+
+  -webkit-animation: rainbow 6s ease infinite;
+  -z-animation: rainbow 6s ease infinite;
+  -o-animation: rainbow 6s ease infinite;
+    animation: rainbow 6s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
 }
