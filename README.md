@@ -1,4 +1,6 @@
 
+![Website Screenshot](https://i.ibb.co/RCqHQy2/Alpha-Byte.png)
+
 <img src="https://raw.githubusercontent.com/AlphaByte-dev/alphabyte-website/main/src/images/AlphaByte_logo-only.png" alt="logo" width="100px" align="right" />
 
 # AlphaByte Official Website
