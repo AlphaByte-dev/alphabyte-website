@@ -26,4 +26,22 @@ const events_data = [
     register_link: "https://bit.ly/alphabyte-py",
     vod: "https://youtu.be/3rdVrkCodTg",
   },
+  {
+    name: "Beginner's Guide for Hackathons",
+    description: "Get the best tips & tricks to get started and excel at hackathons. ",
+    image: "./assets/images/events/Hackathon-101.png",
+    location: "Online",
+    date: "2021-01-05T19:00:00+0530",
+    register_link: "https://bit.ly/hacka101",
+    vod: "",
+  },
+  {
+    name: "MLH Local Hack Day: Build",
+    description: "Week long challenges. Expand your network, skillset, and hacker portfolio, and earn yourself rewards.",
+    image: "./assets/images/events/MLH-LHD-2021.png",
+    location: "Online",
+    date: "2021-01-10T15:00:00-0500",
+    register_link: "https://www.linkedin.com/feed/update/urn:li:activity:6750498613375361024",
+    vod: "",
+  },
 ];

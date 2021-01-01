@@ -14,7 +14,7 @@
         <div class="event__info__child event__name">${event.name}</div>
         <div class="event__info__child event__description">${event.description.length > 113 ? event.description.substring(0, 110) + '...' : event.description}</div>
         <a class="event__info__child event__button-container register-button-container ${event.register_link ? '' : 'event__button-disabled'}" href="${event.register_link}" target="_blank">
-          <button class="event__button register-button">${event.register_link ? 'Register' : 'Coming soon'}</button>
+          <button class="event__button register-button">${event.register_link ? '<i class="fas fa-edit"></i>Register' : 'Coming soon'}</button>
         </a>
         <a class="event__info__child event__button-container vod-button-container ${event.vod ? '' : 'event__button-disabled'}" href="${event.vod}" target="_blank">
           <button class="event__button vod-button"><i class="fab fa-youtube"></i>Watch</button>
@@ -45,7 +45,7 @@
   const upcomingEventsHTMLElement = document.querySelector('#upcoming-events');
 
   if(upcoming_events_data.length > 0) {
-    upcoming_events_data.sort((a, b) => (a.date > b.date) ? -1 : (a.date < b.date) ? 1 : 0);
+    upcoming_events_data.sort((a, b) => (a.date < b.date) ? -1 : (a.date > b.date) ? 1 : 0);
     
     const upcomingEventsFragment = document.createDocumentFragment();
     upcoming_events_data.forEach(event => {
