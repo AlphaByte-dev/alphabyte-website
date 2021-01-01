@@ -1,6 +1,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>@@title</title>
+<meta name="description" content="@@description">
+
+<!-- META TAGS (SOCIAL MEDIA) -->
+<meta property="og:title" content="@@title">
+<meta property="og:description" content="@@description">
+<meta property="og:type" content="website" />
+<meta property="og:image" content="@@if (context.image !== '') {@@image}@@if (context.image === '') {https://alphabyte.info/assets/images/homepage.png}">
+<meta property="og:url" content="https://alphabyte.info/@@url">
 
 <!-- FAVICON -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -11,12 +19,11 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 
-<!-- inject:css -->
-<!-- endinject -->
-
 <!-- FONTS -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
+<!-- inject:css -->
+<!-- endinject -->
