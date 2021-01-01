@@ -27,7 +27,7 @@
   background-color: var(--color-primary);
   color: white;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
 
   &:hover {
     opacity: 0.8;
@@ -54,6 +54,10 @@
   
   &.github {
     background: #24292e;
+  }
+
+  &.youtube {
+    background: #FF0000;
   }
 }
 
