@@ -1,3 +1,5 @@
+@import "tippy.js/dist/tippy";
+
 #members-section {
   padding-bottom: 30px;
 }
@@ -74,7 +76,10 @@
 
 .member__role {
   font-family: monospace, sans-serif;
+  display: inline-block;
   font-size: 1rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .member-social {

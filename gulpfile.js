@@ -4,7 +4,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const env = require('postcss-preset-env');
-const babel = require('gulp-babel');
+// const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync');
 const flatten = require('gulp-flatten');
@@ -13,6 +13,11 @@ const inject = require('gulp-inject');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 const fileinclude = require('gulp-file-include');
+const rollup = require('gulp-better-rollup');
+const { babel } = require('@rollup/plugin-babel');
+const { nodeResolve: resolve } = require('@rollup/plugin-node-resolve');
+const commonjs = require('@rollup/plugin-commonjs');
+const replace = require('@rollup/plugin-replace');
 
 /* LIVE DEV WEBSERVER */
 gulp.task('serve', function() {
@@ -63,7 +68,9 @@ gulp.task('sass', function () {
   return gulp.src('src/css/**/*.scss')
     .pipe(sourcemaps.init())
     // .pipe(flatten())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: ['node_modules']
+    }).on('error', sass.logError))
     .pipe(postcss(plugins))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('.'))
@@ -76,7 +83,18 @@ gulp.task('js', function () {
   return gulp.src('src/js/**/*.js')
     .pipe(sourcemaps.init())
     // .pipe(flatten())
-    .pipe(babel())
+    // .pipe(babel())
+    .pipe(rollup({ plugins: [
+      babel({
+        exclude: 'node_modules/**',
+        babelHelpers: 'bundled',
+      }), 
+      resolve(), 
+      commonjs(),
+      replace({
+        'process.env.NODE_ENV': JSON.stringify('production'),
+      }),
+    ] }, 'umd'))
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/assets/js/'))
