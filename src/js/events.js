@@ -1,3 +1,5 @@
+import events_data from '../data/data_events';
+
 const event_template = (event) => {
   return `
     <a href="${event.image}" class="event__image">
@@ -12,12 +14,21 @@ const event_template = (event) => {
       </div>
       <div class="event__info__child event__name">${event.name}</div>
       <div class="event__info__child event__description">${event.description.length > 113 ? event.description.substring(0, 110) + '...' : event.description}</div>
-      <a class="event__info__child event__button-container register-button-container ${event.register_link ? '' : 'event__button-disabled'}" href="${event.register_link}" target="_blank">
-        <button class="event__button register-button">${event.register_link ? '<i class="fas fa-edit"></i>Register' : 'Coming soon'}</button>
-      </a>
-      <a class="event__info__child event__button-container vod-button-container ${event.vod ? '' : 'event__button-disabled'}" href="${event.vod}" target="_blank">
-        <button class="event__button vod-button"><i class="fab fa-youtube"></i>Watch</button>
-      </a>
+      <div class="event__info__child event__buttons">
+        <a class="event__button-container register-button-container ${event.register_link ? '' : 'event__button-disabled'}" href="${event.register_link}" target="_blank">
+          <button class="event__button register-button">${event.register_link ? '<i class="fas fa-edit"></i>Register' : 'Coming soon'}</button>
+        </a>
+        <a class="event__button-container vod-button-container ${event.vod ? '' : 'event__button-disabled'}" href="${event.vod}" target="_blank">
+          <button class="event__button vod-button"><i class="fab fa-youtube"></i>Watch</button>
+        </a>
+        ${
+          event.additional_buttons && event.additional_buttons.length ? event.additional_buttons.map(button =>
+            `<a class="event__button-container additional-button-container" href="${button.url}" target="_blank">
+              <button class="event__button additional-button">${button.text}</button>
+            </a>`
+          ).join('') : ''
+        }
+      </div>
     </div>
   `;
 };

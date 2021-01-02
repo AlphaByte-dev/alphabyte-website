@@ -36,6 +36,30 @@ const events_data = [
     vod: "",
   },
   {
+    name: "GitHub Hands on Workshop: Code Innovation Series",
+    description: "Hands on GitHub workshop by Kaushik Roy - Principal Architect, IncubateIND",
+    image: "./assets/images/events/Workshop-CodeInnovationSeries.jpg",
+    location: "Online",
+    date: "2021-01-04T11:00:00+0530",
+    register_link: "https://bit.ly/githubamitymumbai",
+    vod: "",
+  },
+  {
+    name: "Hackathon: Code Innovation Series",
+    description: "Young Technology Enthusiasts will solve the major problems of Education, Healthtech, and Fintech that curbs India's growth story. This hackathon is hosted by IncubateIND under the GitHub Campus Program in collaboration.",
+    image: "./assets/images/events/Hackathon-CodeInnovationSeries.jpg",
+    location: "Online",
+    date: "2021-01-08T11:00:00+0530",
+    register_link: "https://docs.google.com/forms/d/e/1FAIpQLScHKhbq9bz5U4W1iK22pjDvs0zFKaNUXUfGiYpl3JPkSbU6dQ/viewform",
+    vod: "",
+    additional_buttons: [
+      {
+        text: 'Learn More',
+        url: 'https://incubateind.com/cis',
+      },
+    ],
+  },
+  {
     name: "MLH Local Hack Day: Build",
     description: "Week long challenges. Expand your network, skillset, and hacker portfolio, and earn yourself rewards.",
     image: "./assets/images/events/MLH-LHD-2021.png",
@@ -45,3 +69,5 @@ const events_data = [
     vod: "",
   },
 ];
+
+export default events_data;
