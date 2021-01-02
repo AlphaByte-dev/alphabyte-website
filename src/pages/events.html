@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  @@include('../sections/head.html', { title: 'Events - AlphaByte' })
+  @@include('../sections/head.html', {
+    title: 'Events - AlphaByte',
+    description: 'AlphaByte organises guest talks, workshops, hackathons, coding challenges, and more. Watch out for upcoming events.',
+    image: '',
+    url: 'events.html'
+  })
   
   <!-- CSS -->
   <link href="./assets/css/events.css" rel="stylesheet" />
@@ -37,7 +42,6 @@
   @@include('../sections/footer.html')
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js" integrity="sha512-ZajFBgnksNp8Rj+AbmYe8ueOu45HiSjtf3QpqnRbHlq719m6VK0FkbYIqQ8wEnlVuJ1i9pC+z6Z9ewmDnUTMCg==" crossorigin="anonymous"></script>
-  <script src="./assets/data/data_events.js"></script>
   <script src="./assets/js/events.js"></script>
 </body>
 </html>
