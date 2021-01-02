@@ -49,7 +49,7 @@ const events_data = [
     description: "Young Technology Enthusiasts will solve the major problems of Education, Healthtech, and Fintech that curbs India's growth story. This hackathon is hosted by IncubateIND under the GitHub Campus Program in collaboration.",
     image: "./assets/images/events/Hackathon-CodeInnovationSeries.jpg",
     location: "Online",
-    date: "2021-01-08T11:00:00+0530",
+    date: "2021-01-08T10:00:00+0530",
     register_link: "https://docs.google.com/forms/d/e/1FAIpQLScHKhbq9bz5U4W1iK22pjDvs0zFKaNUXUfGiYpl3JPkSbU6dQ/viewform",
     vod: "",
     additional_buttons: [
