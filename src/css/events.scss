@@ -28,7 +28,7 @@
   top: -20px;
   width: 40%;
   height: 95%;
-  max-height: 230px;
+  max-height: 225px;
   background-color: var(--color-primary);
   border-radius: 10px;
   overflow: hidden;
@@ -90,12 +90,18 @@
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--color-primary);
-  margin-bottom: 15px;
+  margin-bottom: 3px;
+}
+
+.event__duration {
+  color: rgba(var(--color-primary-rgb), 0.7);
 }
 
 .event__description {
   color: var(--color-black-light);
+  margin-top: 12px;
   margin-bottom: 15px;
+  line-height: 1.4rem;
 }
 .event__description-expand, .event__description-collapse {
   border: 1px solid var(--color-primary);
