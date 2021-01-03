@@ -94,3 +94,5 @@ const members_data = [
     }
   },
 ];
+
+export default members_data;

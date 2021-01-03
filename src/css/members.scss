@@ -25,6 +25,7 @@
     20px 16px 50px -20px rgba(var(--color-primary-rgb), 1);
   position: relative;
   transition: var(--member-animation);
+  animation: var(--animation-slide-up);
 
   .member-social a:hover {
     background-color: rgba(var(--color-primary-rgb), 0.66),
