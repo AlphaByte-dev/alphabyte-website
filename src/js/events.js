@@ -1,6 +1,13 @@
 import events_data from '../data/data_events';
 
 const TODAY_DATE = new Date();
+function splitTimeFromHours(numberOfHours){
+  const days = Math.floor(numberOfHours / 24);
+  const remainder = numberOfHours % 24;
+  const hours = Math.floor(remainder);
+  const mins = Math.floor(60 * (remainder - hours));
+  return {days, hours, mins};
+}
 
 const event_template = (event, isPastEvent) => {
   const description_long = event.description;
@@ -8,6 +15,9 @@ const event_template = (event, isPastEvent) => {
   const isDescriptionOverflow = description_long.length > 113 ;
   const expand_button_html = `<span class="event__description-expand">+</span>`;
   const collapse_button_html = `<span class="event__description-collapse">-</span>`;
+
+  const { days, hours } = splitTimeFromHours(event.duration_hours);
+  const duration = event.duration_hours ? `${days ? days + (days === 1 ? ' day' : ' days') : ''}${hours ? ' ' + hours + (hours === 1 ? ' hour' : ' hours') : ''}` : '';
 
   const div = document.createElement('div');
   div.className = 'event';
@@ -23,6 +33,7 @@ const event_template = (event, isPastEvent) => {
         --><span class="event__time">${event.date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</span>
       </div>
       <div class="event__info__child event__name">${event.name}</div>
+      <div class="event__info__child event__duration">${duration}</div>
       <div class="event__info__child event__description">${isDescriptionOverflow ? description_short + '...' : description_long}${isDescriptionOverflow ? expand_button_html : ''}</div>
       ${((event.additional_buttons && event.additional_buttons.length) || (event.vod && event.vod.length)) || !isPastEvent ?
         `<div class="event__info__child event__buttons">
