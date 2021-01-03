@@ -1,4 +1,5 @@
 import tippy from 'tippy.js';
+import members_data from '../data/data_members';
 import roles_data from '../data/data_roles';
 
 const membersHTMLElement = document.querySelector('#core-committee-members');
