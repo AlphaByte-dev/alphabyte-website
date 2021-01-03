@@ -1,5 +1,7 @@
 import events_data from '../data/data_events';
 
+const TODAY_DATE = new Date();
+
 const event_template = (event, isPastEvent) => {
   const description_long = event.description;
   const description_short = event.description.substring(0, 110);
@@ -76,10 +78,6 @@ const no_event_template = (text) => {
   `;
 };
 
-const EVENT_DURATION_OFFSET = 2;
-const reference_date = new Date();
-reference_date.setHours(reference_date.getHours() + EVENT_DURATION_OFFSET);
-
 // Convert ISO 8601 format date string to Date object
 const events = events_data.map(event => {
   event.date = new Date(event.date);
@@ -87,7 +85,11 @@ const events = events_data.map(event => {
 });
 
 // Upcoming Events
-const upcoming_events_data = events.filter(event => event.date > reference_date);
+const upcoming_events_data = events.filter(event => {
+  const event_end_date = new Date(event.date.getTime());
+  event_end_date.setHours(event_end_date.getHours() + event.duration_hours);
+  return TODAY_DATE < event_end_date;
+});
 const upcomingEventsHTMLElement = document.querySelector('#upcoming-events');
 
 if(upcoming_events_data.length > 0) {
@@ -104,7 +106,11 @@ if(upcoming_events_data.length > 0) {
 }
 
 // Past Events
-const past_events_data = events.filter(event => event.date <= reference_date);
+const past_events_data = events.filter(event => {
+  const event_end_date = new Date(event.date.getTime());
+  event_end_date.setHours(event_end_date.getHours() + event.duration_hours);
+  return TODAY_DATE >= event_end_date;
+});
 const pastEventsHTMLElement = document.querySelector('#past-events');
 const loadMoreButton = document.querySelector('#load-more-past-events');
 let past_events_data_loaded;
