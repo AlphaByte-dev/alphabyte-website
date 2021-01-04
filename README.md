@@ -21,7 +21,7 @@ Official website of AlphaByte, Amity University Mumbai.
 ## 🚀 Hosting
 Project is currently hosted on [Netlify](https://www.netlify.com/).
 
-**Live URL:** https://alphabyte-aum.netlify.app/
+**Live URL:** https://alphabyte.info
 
 <a id="tech-stack"></a>
 ## ⚙️ Tech Stack
