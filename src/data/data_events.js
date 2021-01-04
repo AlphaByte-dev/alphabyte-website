@@ -56,12 +56,12 @@ const events_data = [
     location: "Online",
     date: "2021-01-08T10:00:00+0530",
     duration_hours: 9,
-    register_link: "https://docs.google.com/forms/d/e/1FAIpQLScHKhbq9bz5U4W1iK22pjDvs0zFKaNUXUfGiYpl3JPkSbU6dQ/viewform",
+    register_link: "https://incubateind.com/hack/amitymumbai",
     vod: "",
     additional_buttons: [
       {
-        text: 'Learn More',
-        url: 'https://incubateind.com/cis',
+        text: 'Fill Form',
+        url: 'https://docs.google.com/forms/d/e/1FAIpQLScHKhbq9bz5U4W1iK22pjDvs0zFKaNUXUfGiYpl3JPkSbU6dQ/viewform',
       },
     ],
   },
