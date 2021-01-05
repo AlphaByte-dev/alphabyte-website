@@ -97,3 +97,9 @@
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
 }
+
+@media (max-width: 450px) {
+  .social-button {
+    flex: 1 0 85px;
+  }
+}
