@@ -42,7 +42,7 @@ const events_data = [
   {
     name: "GitHub Hands on Workshop: Code Innovation Series",
     description: "Hands on GitHub workshop by Kaushik Roy - Principal Architect, IncubateIND",
-    image: "./assets/images/events/Workshop-CodeInnovationSeries.jpg",
+    image: "./assets/images/events/placeholder.png",
     location: "Online",
     date: "2021-01-04T11:00:00+0530",
     duration_hours: 1,
