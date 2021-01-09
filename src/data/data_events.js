@@ -74,6 +74,12 @@ const events_data = [
     duration_hours: 192,
     register_link: "https://www.linkedin.com/feed/update/urn:li:activity:6750498613375361024",
     vod: "",
+    additional_buttons: [
+      {
+        text: 'Website',
+        url: 'https://localhackday.mlh.io/build',
+      },
+    ],
   },
 ];
 
