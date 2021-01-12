@@ -37,7 +37,7 @@ const events_data = [
     date: "2021-01-05T19:00:00+0530",
     duration_hours: 1,
     register_link: "https://bit.ly/hacka101",
-    vod: "",
+    vod: "https://www.youtube.com/watch?v=18csx9X3AhY",
   },
   {
     name: "GitHub Hands on Workshop: Code Innovation Series",
@@ -60,8 +60,8 @@ const events_data = [
     vod: "",
     additional_buttons: [
       {
-        text: 'Fill Form',
-        url: 'https://docs.google.com/forms/d/e/1FAIpQLScHKhbq9bz5U4W1iK22pjDvs0zFKaNUXUfGiYpl3JPkSbU6dQ/viewform',
+        text: 'Website',
+        url: 'https://incubateind.com/hack/amitymumbai',
       },
     ],
   },
