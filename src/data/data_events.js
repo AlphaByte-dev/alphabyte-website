@@ -81,6 +81,16 @@ const events_data = [
       },
     ],
   },
+  {
+    name: "IncubateIND Developer Tech Camp",
+    description: "Get ready to dive into the world of DevOps and familiarize yourself with Docker and Kubernetes through workshops, challenges, and coding tasks.",
+    image: "./assets/images/events/DevOpsCamp.png",
+    location: "Online",
+    date: "2021-03-20T00:00:00+0530",
+    duration_hours: 72,
+    register_link: "https://incubateind.com/idtc",
+    vod: "",
+  },
 ];
 
 export default events_data;
