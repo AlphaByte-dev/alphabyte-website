@@ -82,7 +82,7 @@ const events_data = [
     ],
   },
   {
-    name: "IncubateIND Developer Tech Camp",
+    name: "IncubateIND Developer Tech Camp - DevOps Camp",
     description: "Get ready to dive into the world of DevOps and familiarize yourself with Docker and Kubernetes through workshops, challenges, and coding tasks.",
     image: "./assets/images/events/DevOpsCamp.png",
     location: "Online",
