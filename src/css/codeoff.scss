@@ -1,0 +1,327 @@
+.floating-navbar {
+  position: fixed;
+  top: 30%;
+  left: 40px;
+  border-radius: 20px;
+  .navbar-item {
+    padding-bottom: 30px;
+
+    div {
+      display: inline-block;
+      width: 2rem;
+      vertical-align: middle;
+    }
+
+    .circle-btn {
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  .floating-navbar {
+    visibility: hidden;
+  }
+}
+
+.codeoff {
+  padding-top: 4rem;
+  //background: #EAB716;
+  //background: #194880;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.codeoff-home {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.codeoff-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.codeoff-description {
+  color: #36454f;
+  width: 60%;
+  height: 100%;
+}
+
+.codeoff-logo {
+  width: 15rem;
+  margin-bottom: 1rem;
+  //margin-left: -2.2rem;
+}
+
+.intro-right {
+  text-align: center;
+  margin-right: -4rem;
+  margin-top: -4rem;
+
+  .register-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0445af;
+    color: white;
+    cursor: pointer;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 42.5px;
+    text-align: center;
+    margin: 0;
+    height: 60px;
+    padding: 10px 50px;
+    border-radius: 30px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.timeline {
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.time {
+  font-size: 4rem;
+  color: rgb(61, 55, 55);
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+.time .time-div {
+  display: inline-block;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.time .time-subtitle {
+  font-size: 1.5rem;
+}
+
+.section-heading {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+  color: rgb(56, 50, 50);
+}
+
+.rules {
+  .rule-text {
+    padding: 9px 10px 0 10px;
+    color: rgb(65, 60, 60);
+  }
+
+  .snippet-bg {
+    background-color: rgba(190, 185, 185, 0.281);
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    img {
+      padding: 5px;
+      width: 2rem;
+      height: 1.5rem;
+    }
+    div {
+      vertical-align: middle;
+    }
+  }
+  .run-btn {
+    background-color: rgba(27, 139, 27, 0.719);
+    padding: 10px 20px;
+    margin: 0.5rem auto;
+    display: inline-block;
+    border-radius: 20px;
+    width: 5rem;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .run-btn-disabled {
+    background-color: rgba(95, 121, 95, 0.733);
+    color: white;
+    cursor: default;
+  }
+
+  .output-bg {
+    height: 200px;
+    border-radius: 10px;
+    .rule-row-1 {
+      background-color: rgb(214, 214, 214);
+      height: auto;
+      padding: 3px 0 10px 0;
+    }
+    .rule-row-2 {
+      background-color: rgb(236, 230, 230);
+      height: auto;
+      padding: 3px 0 10px 0;
+    }
+    :first-child {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    :last-child {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+
+.challenges {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  .challenge-content {
+    display: flex;
+    flex-direction: row;
+    .challenge-card {
+      border: 1px solid gray;
+      border-radius: 25px;
+      padding: 20px;
+      width: 13rem;
+      margin-right: 2rem;
+      .card-heading {
+        border-bottom: 1px solid gray;
+        text-align: center;
+        font-size: 1rem;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin: 0 auto 20px auto;
+      }
+    }
+  }
+}
+
+.prizes {
+  // Colors
+  $color-one: #194780d5;
+  $color-two: #383a3f;
+  $color-three: #eab716;
+  $color-four: white;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  .prizes-content {
+    display: flex;
+    margin-top: -1rem;
+    .card {
+      background: $color-one;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      margin: 50px 20px 20px 20px;
+      width: calc(33.3333% - 40px);
+      padding: 20px;
+      text-align: center;
+      color: white;
+
+      &:nth-child(2) {
+        background-color: rgba(119, 113, 113, 0.274);
+        box-shadow: 0 0 0 0;
+        color: rgb(66, 57, 57);
+        .prize-amount {
+          background: $color-four;
+          color: rgb(75, 63, 63);
+        }
+      }
+
+      &:nth-child(3) {
+        background-color: rgba(119, 113, 113, 0.274);
+        box-shadow: 0 0 0 0;
+        color: rgb(66, 57, 57);
+        .prize-amount {
+          background: $color-four;
+          color: rgb(75, 63, 63);
+        }
+      }
+
+      .title {
+        font-size: 25px;
+        display: block;
+        margin-bottom: 2rem;
+      }
+      .icon {
+        margin: 50px 0;
+        svg {
+          width: 100px;
+          height: 100px;
+          path {
+            fill: $color-three;
+          }
+        }
+      }
+      .rewards {
+        ul {
+          padding: 0;
+          margin: 20px 0 50px 0;
+          list-style-type: none;
+          li {
+            margin: 10px 0;
+            font-size: 14px;
+          }
+        }
+      }
+      .prize-amount {
+        display: block;
+        background: $color-three;
+        color: white;
+        padding: 15px 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.9);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.sponsors {
+  text-align: center;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  .sponsors-title {
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    width: auto;
+    padding-bottom: 3px;
+    border-bottom: 3px var(--color-secondary) solid;
+  }
+}
+
+.load-error {
+  text-align: center;
+  display: none;
+  margin: 40% auto;
+  p {
+    color: rgb(70, 64, 64);
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .floating-navbar {
+    display: none;
+  }
+  .codeoff {
+    display: none;
+  }
+  .load-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
