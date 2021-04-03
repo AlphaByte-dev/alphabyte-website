@@ -84,12 +84,14 @@ gulp.task('js', function () {
     .pipe(rollup({ plugins: [
       babel({
         exclude: 'node_modules/**',
+        presets: [["@babel/preset-env",{ modules: false, useBuiltIns: 'usage', corejs: '3' }]],
         babelHelpers: 'bundled',
       }), 
       resolve(), 
       commonjs(),
       replace({
         'process.env.NODE_ENV': JSON.stringify('production'),
+        preventAssignment: true,
       }),
     ]}, 'umd'))
     // .pipe(uglify())
