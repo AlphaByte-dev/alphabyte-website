@@ -18,12 +18,6 @@
   }
 }
 
-@media only screen and (max-width: 1270px) {
-  .floating-navbar {
-    visibility: hidden;
-  }
-}
-
 .codeoff {
   padding-top: 4rem;
   //background: #EAB716;
@@ -95,6 +89,14 @@
   display: flex;
   justify-content: center;
   margin-top: 3.5rem;
+}
+
+.time_finish {
+  font-size: 2rem;
+  color: rgb(61, 55, 55);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
 }
 
 .time .time-div {
@@ -303,25 +305,25 @@
   }
 }
 
-.load-error {
-  text-align: center;
-  display: none;
-  margin: 40% auto;
-  p {
-    color: rgb(70, 64, 64);
-  }
-}
-
 @media screen and (max-width: 1070px) {
   .floating-navbar {
     display: none;
   }
-  .codeoff {
-    display: none;
+  .codeoff-intro {
+    display: inline-block;
+    .codeoff-description {
+      width: 100% !important;
+    }
+    .intro-right {
+      margin-top: 2rem;
+      margin-right: auto;
+    }
   }
-  .load-error {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+  .prizes-content {
+    display: inline !important;
+    .card {
+      width: 90% !important;
+    }
   }
 }

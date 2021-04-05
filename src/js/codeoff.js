@@ -1,7 +1,25 @@
 var countDownDate = new Date("2021-04-24T10:00:00+05:30").getTime();
+var timeElement = document.getElementById("countdown");
+var currentDate = new Date().toLocaleDateString();
+var registerButton = document.getElementById("registerButton");
 
 var x = setInterval(function () {
   var now = new Date().getTime();
+  console.log(currentDate);
+  if (currentDate === "4/24/2021") {
+    timeElement.classList.remove("time");
+    timeElement.innerHTML =
+      "<div class='time_finish'>The event is in progress!</div>";
+    registerButton.innerHTML = "";
+    return;
+  }
+  if (currentDate === "4/5/2021") {
+    timeElement.classList.remove("time");
+    timeElement.innerHTML =
+      "<div class='time_finish'>This event has concluded.</div>";
+    registerButton.innerHTML = "";
+    return;
+  }
 
   var distance = countDownDate - now;
 
