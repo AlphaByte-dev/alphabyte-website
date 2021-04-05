@@ -13,7 +13,7 @@ var x = setInterval(function () {
     registerButton.innerHTML = "";
     return;
   }
-  if (currentDate === "4/5/2021") {
+  if (currentDate === "4/26/2021") {
     timeElement.classList.remove("time");
     timeElement.innerHTML =
       "<div class='time_finish'>This event has concluded.</div>";
