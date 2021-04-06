@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../sections/head.html', { title: 'ByteLeague', description: '',
+    image: '', url: 'byteleague.html' })
+
+    <!-- CSS -->
+    <link href="./assets/css/codeoff.css" rel="stylesheet" />
+  </head>
+  <body>
+    @@include('../sections/nav.html')
+
+    <div class="floating-navbar">
+      <div class="navbar-item">
+        <div data-name="home">
+          <img src="./assets/images/codeoff/circle.svg" class="circle-btn" />
+        </div>
+        <div>Home</div>
+      </div>
+      <div class="navbar-item">
+        <div data-name="rules">
+          <img src="./assets/images/codeoff/circle.svg" class="circle-btn" />
+        </div>
+        <div>Rules</div>
+      </div>
+      <div class="navbar-item">
+        <div data-name="challenges">
+          <img src="./assets/images/codeoff/circle.svg" class="circle-btn" />
+        </div>
+        <div>Challenges</div>
+      </div>
+      <div class="navbar-item">
+        <div data-name="prizes">
+          <img src="./assets/images/codeoff/circle.svg" class="circle-btn" />
+        </div>
+        <div>Prizes</div>
+      </div>
+      <div class="navbar-item">
+        <div data-name="sponsors">
+          <img src="./assets/images/codeoff/circle.svg" class="circle-btn" />
+        </div>
+        <div>Sponsors</div>
+      </div>
+    </div>
+
+    <main id="home" class="codeoff">
+      <div class="container__inner">
+        <div class="codeoff-home">
+          <img
+            src="./assets/images/codeoff/codeoff_logo.png"
+            class="codeoff-logo"
+          />
+          <div class="codeoff-date">
+            <i class="fas fa-calendar-day"></i>
+            &nbsp;&nbsp;24 April, 2021
+          </div>
+
+          <div class="codeoff-intro">
+            <div class="codeoff-description">
+              <!-- <h2 class="codeoff-title">Code-Off</h2> -->
+
+              <h1 class="codeoff-tagline">
+                A competitive coding competition, by people who love challenges,
+                for people who love challenges.
+              </h1>
+            </div>
+            <div class="intro-right">
+              <img
+                src="./assets/images/codeoff/timeline.png"
+                class="timeline"
+              />
+              <div id="registerButton">
+                <a href="https://forms.gle/pDJc8dLZXE2FwjTf6" class="register-btn">
+                  Register Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="time" id="countdown">
+            <div class="time-div">
+              <div id="cd-days"></div>
+              <div class="time-subtitle">Days</div>
+            </div>
+            <div class="time-div">
+              <div id="cd-hours"></div>
+              <div class="time-subtitle">Hours</div>
+            </div>
+            <div class="time-div">
+              <div id="cd-minutes"></div>
+              <div class="time-subtitle">Minutes</div>
+            </div>
+            <div class="time-div">
+              <div id="cd-seconds"></div>
+              <div class="time-subtitle">Seconds</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="rules" class="rules">
+          <p class="section-heading">Rules</p>
+          <div class="snippet-bg">
+            <img src="./assets/images/codeoff/codestart.svg" />
+            print(rules);
+          </div>
+          <div id="run-btn" class="run-btn">Run</div>
+          <div id="output" class="output-bg">
+            <div class="rule-row-1"></div>
+            <div class="rule-row-2"></div>
+            <div class="rule-row-1"></div>
+            <div class="rule-row-2"></div>
+            <div class="rule-row-1"></div>
+            <!-- <div class="rule-row-2"></div> -->
+          </div>
+        </div>
+
+        <div id="challenges" class="challenges">
+          <p class="section-heading">Challenges</p>
+          <div class="challenge-content">
+            <div class="challenge-card">
+              <div class="card-heading">Round 1</div>
+              <div class="card-content">
+                <p>5 questions</p>
+                <p>Easy Difficulty</p>
+                <i class="fas fa-stopwatch"></i> 1 hour
+              </div>
+            </div>
+
+            <div class="challenge-card">
+              <div class="card-heading">Round 2</div>
+              <div class="card-content">
+                <p>5 questions</p>
+                <p>Varying Difficulties</p>
+                <i class="fas fa-stopwatch"></i> 2.5 hours
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="prizes" class="prizes">
+          <div>
+            <p class="section-heading">Prizes</p>
+          </div>
+
+          <div class="prizes-content">
+            <div class="card">
+              <div class="title">First</div>
+              <!-- <div class="rewards">
+                <ul>
+                  <li>Reward 1</li>
+                  <li>Reward 2</li>
+                  <li>Reward 3</li>
+                </ul>
+              </div> -->
+              <img src="./assets/images/codeoff/gold.png">
+              <div class="prize-amount">TBA</div>
+            </div>
+
+            <div class="card">
+              <div class="title">Second</div>
+              <!-- <div class="rewards">
+                <ul>
+                  <li>Reward 1</li>
+                  <li>Reward 2</li>
+                  <li>Reward 3</li>
+                </ul>
+              </div> -->
+              <img src="./assets/images/codeoff/silver.png">
+              <div class="prize-amount">TBA</div>
+            </div>
+
+            <div class="card">
+              <div class="title">Third</div>
+              <!-- <div class="rewards">
+                <ul>
+                  <li>Reward 1</li>
+                  <li>Reward 2</li>
+                  <li>Reward 3</li>
+                </ul>
+              </div> -->
+              <img src="./assets/images/codeoff/bronze.png">
+              <div class="prize-amount">TBA</div>
+            </div>
+        </div>
+        <div style="margin-left: 1rem">Icons by <a target="_blank" href="">Icons8</a></div>
+
+        <div id="sponsors" class="sponsors">
+          <div class="sponsors-title">Our Sponsors</div>
+          <div class="sponsors-list"></div>
+        </div>
+      </div>
+    </main>
+
+    @@include('../sections/footer.html')
+    <!-- JS -->
+    <script src="./assets/js/codeoff.js"></script>
+  </body>
+</html>
