@@ -1,24 +1,24 @@
 const roles_data = {
   'President': {
-    description: 'President'
+    description: 'Cordinates with all department,Ensures the Proper Allocation of Resources and all Departments meet their Goals.'
   },
   'Vice President': {
-    description: 'Vice President'
+    description: 'Cordinates with President ,Ensures the Proper Allocation of Resources, and all Departments meet their Goals.'
   },
   'Technical Head': {
-    description: 'Technical Head'
+    description: 'Manages the Technical Aspect of Events, Mentors Students, and Works on Community-Driven Projects.'
   },
   'Event Head': {
-    description: 'Event Head'
+    description: 'Organises Events and Workshops.'
   },
   'Media Head': {
-    description: 'Media Head'
+    description: 'Designs, Implement and Execute the Publicity Media Campaigns.'
   },
   'Marketing Head': {
-    description: 'Marketing Head'
+    description: 'Manages Company Marketing and Communications Strategies, as well as Overall Branding and Image.'
   },
   'Mentor': {
-    description: 'Mentor'
+    description: 'Mentor Student Provide them Valuable Advice and Guidance.'
   },
 };
 
