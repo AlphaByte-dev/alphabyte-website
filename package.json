@@ -32,13 +32,15 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^8.2.1",
+    "postcss": "^8.2.9",
     "postcss-preset-env": "^6.7.0",
-    "rollup": "^2.35.1",
-    "sass": "^1.30.0"
+    "rollup": "^2.44.0",
+    "sass": "^1.32.8"
   },
   "browserslist": "> 0.25%, not dead",
   "dependencies": {
-    "tippy.js": "^6.2.7"
+    "core-js": "^3.10.0",
+    "regenerator-runtime": "^0.13.7",
+    "tippy.js": "^6.3.1"
   }
 }

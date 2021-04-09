@@ -63,10 +63,7 @@ const event_template = (event, isPastEvent) => {
   const description_container = div.querySelector('.event__description');
   const expand_description_button = div.querySelector('.event__description-expand');
   if(expand_description_button) {
-    console.log('gg', event.name);
     description_container.addEventListener('click', event => {
-      const selectedButton = event.target;
-      console.dir(selectedButton);
       if(event.target.className.includes('event__description-expand')) {
         div.querySelector('.event__description').innerHTML = `${description_long}${collapse_button_html}`;
         expand_description_button.remove();
