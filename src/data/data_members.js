@@ -13,7 +13,7 @@ const members_data = [
   },
   {
     fullname: "Neel Parihar",
-    role: "Technical Head",
+    role: "Technical head",
     image: "./assets/images/members/Neel.jpg",
     social_links: {
       github: "https://github.com/NeelParihar",
@@ -42,7 +42,7 @@ const members_data = [
   },
   {
     fullname: "Tushar Sharma",
-    role: "Mentor",
+    role: "mentor",
     image: "./assets/images/members/Tushar.jpg",
     social_links: {
       github: "https://github.com/ts2972002",
